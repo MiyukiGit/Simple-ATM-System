@@ -6,12 +6,19 @@ I made this project to practice basic C++ programming and understand how input, 
 
 What This Program Can Do
 
-* Add two numbers
-* Subtract two numbers
-* Multiply two numbers
-* Divide two numbers
-* Runs in the terminal
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+- Prevents division by zero
+- Allows the user to calculate again using a loop
+  
+How the Program Works
 
+The user enters two numbers
+The user chooses an operation (+, -, *, /)
+The program displays the result
+The user can choose whether to calculate again or exit
 Why I Made This
 
 I am still learning C++, and this project helped me practice:
@@ -21,18 +28,16 @@ I am still learning C++, and this project helped me practice:
 * Functions
 * Basic problem solving
 
-Example Output
+Example Output 
+```
+Enter the first number: 10
+Enter your second number: 2
+Choose an operation (+, -, *, /): /
+Result: 5
 
+Do you want to calculate again? (y/n): y
+```
 
-Enter first number: 8
-Enter second number: 4
-Choose operation:
-1. Add
-2. Subtract
-3. Multiply
-4. Divide
-
-Result: 12
 
 Things to Improve Later
 
@@ -45,8 +50,3 @@ This is a **beginner project**, so the code is kept simple and easy to understan
 I plan to improve it as I learn more about C++.
 
 
-* Make it sound **even more casual**
-* Add a **student bio section**
-* Match it exactly to **how your code works** (loop / no loop / function / no function)
-
-Just tell me 😄
