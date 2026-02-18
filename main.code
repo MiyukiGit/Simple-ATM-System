@@ -1,88 +1,56 @@
- #include <iostream>
-    using namespace std;
+#include <iostream>
+using namespace std;
 
-    int main() {
-    
-                        // PIN SYSTEM
-    
-    const int PIN = 1612;
-    int enteredPIN;
-    int attempts = 0;
-    
- do{ 
-    cout << "Enter your PIN: ";
-    cin >> enteredPIN;
-    
-    if(enteredPIN != PIN){
-    attempts++;
-    cout << "Incorrect PIN! Attempts left: " << (3 - attempts) << endl;
-    }
-    
-    if(attempts == 3){
-        cout << "Too many attempts! Goodbye" << endl;
-    
-    return 0;
-        
+int main() {
+    char choice;
+    do {
+        double number1;
+        cout << "Enter the first number: ";
+        cin >> number1;
+
+        double number2;
+        cout << "Enter your second number: ";
+        cin >> number2;
+
+        char operation;
+        cout << "Choose an operation (+, -, *, /): ";
+        cin >> operation;
+
+        double result;
+        switch (operation) {
+            case '+':
+                result = (number1 + number2);
+                cout << "Result: " << result << endl;
+                break;
+            
+            case '-':
+                result = (number1 - number2);
+                cout << "Result: " << result << endl;
+                break;
+                
+            case '*':
+                result = (number1 * number2);
+                cout << "Result: " << result << endl;
+                break;
+                
+            case '/':
+                if (number2 != 0) {
+                    result = (number1 / number2);
+                    cout << "Result: " << result << endl;
+                } else {
+                    cout << "Can't divide by 0!" << endl;
+                }
+                break;
+    default:
+        cout << "Invalid Operation!" << endl;
         }
-    
-} while(enteredPIN != PIN);
-        
-    cout << "Access Granted!" << endl << endl;
-    
-                        // ATM SYSTEM
-    
-    double balance = 1000;
-    int option;
-    double amount;
-    
-do{
-    cout << "Select one: " << endl;
-    cout << "1. Check Balance" << endl;
-    cout << "2. Deposit Money" << endl;
-    cout << "3. Withdraw Money" << endl;
-    cout << "4. Exit" << endl;
-    cout << "Enter your choice: " << endl;
-    cin >> option;
-    
-switch(option){
-    case 1:
-    cout << "Your balance is $" << balance << endl << endl;
-    break;
-    
-    case 2:
-    cout << "Enter amount to deposit: " << endl;
-    cin >> amount;
-    balance += amount;
-    cout << "Deposit Succesful!" << endl;
-    cout << "Your new balance is $" << balance << endl << endl;
-    break;
-    
-    case 3:
-    cout << "Enter the amount you want to withdraw: ";
-    cin >> amount;
 
-    if (amount > balance) {
-        cout << "Insufficient funds!" << endl << endl;
-    } else {
-        balance -= amount;
-        cout << "Withdrawal successful! New balance: $" << balance << endl << endl;
-    }
-    break;
-    
-    case 4:
-    cout << "Goodbye!" << endl << endl;
-    break;
-    
-    default: 
-        cout << "Invalid choice! Please enter 1-4." << endl;
-    
-    }
+        cout << "Do you want to calculate again? (y/n): ";
+        cin >> choice;
 
-}while(option != 4);
-    
+    } while (choice == 'y' || choice == 'Y');
 
-
-
+    cout << "Goodbye!" << endl;
 
     return 0;
 }
